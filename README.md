@@ -24,7 +24,7 @@
 
 You can import the database directly using the provided SQL dump.
 
-📦 [Download Database SQL (zipped)](database/dump/laravelbladetemplate.sql.zip)
+📦[ [Download Database SQL (zipped)](database/dump/laravelbladetemplate.sql.zip)]](https://github.com/farmanali007/LaravelBladeTemplate/blob/main/database/dump/LaravelBladeTemplate_DB.zip)
 
 ### Import Instructions
 
