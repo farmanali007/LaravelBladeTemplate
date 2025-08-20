@@ -20,6 +20,23 @@
 
 ---
 
+## 🗄 Database Setup
+
+You can import the database directly using the provided SQL dump.
+
+📦 [Download Database SQL (zipped)](database/dump/laravelbladetemplate.sql.zip)
+
+### Import Instructions
+
+1. Unzip the file.
+   Ensure your .env file has the correct DB credentials:
+   `DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=laravelbladetemplate
+DB_USERNAME=root
+DB_PASSWORD=`
+
 ## 🗂 Database Schema Overview
 
 This project simulates **real-world e-commerce + blog** functionality:
