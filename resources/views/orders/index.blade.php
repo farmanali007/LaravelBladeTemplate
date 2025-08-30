@@ -2,7 +2,9 @@
 
 @section('content')
     <!-- Header Section -->
-    <div class="bg-gradient-to-r from-green-600 to-emerald-700 text-white">
+    <div class="bg-gradient-to-r from-blue-600 to-purple-600">
+
+    {{-- <div class="bg-gradient-to-r from-green-600 to-emerald-700 text-white"> --}}
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="text-center">
                 <h1 class="text-4xl font-bold text-white mb-4">
@@ -27,7 +29,7 @@
                 <h3 class="text-2xl font-bold text-gray-900">{{ $orders->total() }}</h3>
                 <p class="text-gray-600">Total Orders</p>
             </div>
-            
+
             <div class="bg-white rounded-xl shadow-lg p-6 text-center">
                 <div class="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <svg class="w-6 h-6 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -37,7 +39,7 @@
                 <h3 class="text-2xl font-bold text-gray-900">{{ $orders->where('status', 'pending')->count() }}</h3>
                 <p class="text-gray-600">Pending</p>
             </div>
-            
+
             <div class="bg-white rounded-xl shadow-lg p-6 text-center">
                 <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,7 +49,7 @@
                 <h3 class="text-2xl font-bold text-gray-900">{{ $orders->where('status', 'shipped')->count() }}</h3>
                 <p class="text-gray-600">Shipped</p>
             </div>
-            
+
             <div class="bg-white rounded-xl shadow-lg p-6 text-center">
                 <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-3">
                     <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,8 +69,8 @@
                 <!-- Search Bar -->
                 <div class="flex-1 max-w-md">
                     <div class="relative">
-                        <input type="text" 
-                               placeholder="Search by order number or customer..." 
+                        <input type="text"
+                               placeholder="Search by order number or customer..."
                                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center">
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -88,14 +90,14 @@
                         <option>Delivered</option>
                         <option>Cancelled</option>
                     </select>
-                    
+
                     <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
                         <option>Payment Status</option>
                         <option>Paid</option>
                         <option>Pending</option>
                         <option>Failed</option>
                     </select>
-                    
+
                     <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
                         <option>Sort by Date</option>
                         <option>Newest First</option>
@@ -135,7 +137,7 @@
                                 </span>
                             </div>
                         </div>
-                        
+
                         <div class="flex items-center space-x-4 mt-3 lg:mt-0">
                             <span class="text-sm text-gray-600">
                                 {{ $order->created_at->format('M j, Y \a\t g:i A') }}
@@ -216,11 +218,11 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Action Buttons -->
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mt-6 pt-4 border-t border-gray-200">
                         <div class="flex space-x-3 mb-3 sm:mb-0">
-                            <a href="{{ route('orders.show', $order) }}" 
+                            <a href="{{ route('orders.show', $order) }}"
                                class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center">
                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -228,7 +230,7 @@
                                 </svg>
                                 View Details
                             </a>
-                            
+
                             <button class="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-lg font-medium transition-colors duration-200 flex items-center">
                                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
@@ -236,7 +238,7 @@
                                 Download
                             </button>
                         </div>
-                        
+
                         @if($order->status === 'pending')
                             <div class="flex space-x-2">
                                 <button class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-sm font-medium transition-colors duration-200">
@@ -260,7 +262,7 @@
                 <p class="text-gray-600 mb-8 max-w-md mx-auto">
                     There are no orders to display at the moment. Orders will appear here once customers start making purchases.
                 </p>
-                <a href="{{ route('products.index') }}" 
+                <a href="{{ route('products.index') }}"
                    class="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 shadow-lg">
                     <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
@@ -286,7 +288,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
                 </svg>
             </button>
-            
+
             <!-- Tooltip -->
             <div class="absolute bottom-16 right-0 mb-2 px-3 py-2 bg-gray-900 text-white text-sm rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 whitespace-nowrap">
                 Quick Actions
