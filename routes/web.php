@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
+use Symfony\Component\HttpKernel\Tests\TestController;
 
 
 
@@ -21,3 +22,8 @@ use App\Http\Controllers\OrderController;
 
 Route::get('/orders', [OrderController::class, 'index'])->name('orders.index');
 Route::get('/orders/{order}', [OrderController::class, 'show'])->name('orders.show');
+
+Route::get('/test', function () {
+    return view('test');
+})->name('test');
+Route::get('/test-controller', App\Http\Controllers\testController::class)->name('test.controller');

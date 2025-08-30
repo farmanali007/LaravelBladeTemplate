@@ -2,7 +2,9 @@
 
 @section('content')
     <!-- Header Section -->
-    <div class="bg-gradient-to-r from-purple-600 to-pink-600">
+
+    <div class="bg-gradient-to-r from-blue-600 to-purple-600">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
             <div class="text-center">
                 <h1 class="text-4xl font-bold text-white mb-4">
@@ -22,8 +24,8 @@
                 <!-- Search Bar -->
                 <div class="flex-1 max-w-md">
                     <div class="relative">
-                        <input type="text" 
-                               placeholder="Search products..." 
+                        <input type="text"
+                               placeholder="Search products..."
                                class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
                         <div class="absolute inset-y-0 left-0 pl-3 flex items-center">
                             <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,7 +69,7 @@
                                 </span>
                             </div>
                         @endif
-                        
+
                         <div class="absolute top-4 right-4 z-10">
                             <button class="w-8 h-8 bg-white bg-opacity-80 rounded-full flex items-center justify-center hover:bg-opacity-100 transition-all duration-200">
                                 <svg class="w-4 h-4 text-gray-600 hover:text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -138,7 +140,7 @@
                                 </svg>
                                 Add to Cart
                             </button>
-                            <a href="{{ route('products.show', $product) }}" 
+                            <a href="{{ route('products.show', $product) }}"
                                class="bg-gray-100 hover:bg-gray-200 text-gray-700 py-2 px-4 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
@@ -159,7 +161,7 @@
                         <p class="text-gray-600 mb-8">
                             We're currently updating our inventory. Check back soon for amazing products!
                         </p>
-                        <a href="{{ route('home') }}" 
+                        <a href="{{ route('home') }}"
                            class="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200 shadow-lg">
                             <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
@@ -186,10 +188,10 @@
                     Be the first to know about new products, exclusive deals, and special promotions.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-                    <input type="email" 
-                           placeholder="Enter your email address" 
+                    <input type="email"
+                           placeholder="Enter your email address"
                            class="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:ring-2 focus:ring-white focus:outline-none">
-                    <button type="submit" 
+                    <button type="submit"
                             class="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 whitespace-nowrap">
                         Subscribe
                     </button>

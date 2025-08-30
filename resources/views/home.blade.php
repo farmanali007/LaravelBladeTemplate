@@ -6,21 +6,21 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
             <div class="text-center">
                 <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-                    Welcome to 
+                    Welcome to
                     <span class="bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
                         {{ $settings['site_name'] ?? 'Laravel Blade Template' }}
                     </span>
                 </h1>
                 <p class="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                    Discover amazing content, explore our products, and join a community of innovators. 
+                    Discover amazing content, explore our products, and join a community of innovators.
                     Experience the perfect blend of design and functionality.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="{{ route('posts.index') }}" 
+                    <a href="{{ route('posts.index') }}"
                        class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 shadow-lg">
                         Explore Posts
                     </a>
-                    <a href="{{ route('products.index') }}" 
+                    <a href="{{ route('products.index') }}"
                        class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200">
                         View Products
                     </a>
@@ -98,7 +98,7 @@
                                 <span class="mx-2">•</span>
                                 <time>{{ $post->created_at->diffForHumans() }}</time>
                             </div>
-                            <a href="{{ route('posts.show', $post) }}" 
+                            <a href="{{ route('posts.show', $post) }}"
                                class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors duration-200">
                                 Read more
                                 <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -120,7 +120,7 @@
 
             @if($posts->count() > 0)
                 <div class="text-center">
-                    <a href="{{ route('posts.index') }}" 
+                    <a href="{{ route('posts.index') }}"
                        class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 shadow-lg">
                         View All Posts
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -175,7 +175,7 @@
                                     @endif
                                 </div>
                             </div>
-                            <a href="{{ route('products.show', $product) }}" 
+                            <a href="{{ route('products.show', $product) }}"
                                class="w-full bg-purple-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200 inline-block text-center">
                                 View Product
                             </a>
@@ -194,7 +194,7 @@
 
             @if($products->count() > 0)
                 <div class="text-center">
-                    <a href="{{ route('products.index') }}" 
+                    <a href="{{ route('products.index') }}"
                        class="inline-flex items-center bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-200 shadow-lg">
                         Browse All Products
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
